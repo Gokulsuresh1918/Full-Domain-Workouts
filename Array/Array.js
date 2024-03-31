@@ -68,3 +68,44 @@ console.log(flattenedArray); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 
+//DUPLICATES
+function findDuplicates(arr) {
+    const duplicates = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j] ) {
+                duplicates.push(arr[i]);
+            }
+        }
+    }
+
+    return duplicates;
+}
+
+const arrays = [1, 2, 3, 1, 2, 4, 5, 6];
+const find = findDuplicates(arrays);
+console.log(find);
+
+
+//MINIMUM AND MAXIMUM
+let arra = [1,7,8,4,5,6]
+let min = arr[0]
+for(let i=0;i<arr.length;i++) {
+    if(arr[i] > min) {
+        min = arr[i]; 
+    }
+}
+console.log(min);
+
+//SORT
+const numbers = [2,10,6,9,2,3,4]
+numbers.sort((a,b) => b-a) 
+console.log(numbers);
+
+//INSERT ELEMENT
+const numberss = [2,3,1,4,5]
+const numberToInsert = 1
+const indexToInsert = 1
+numbers.splice(indexToInsert,0,numberToInsert)
+console.log(numbers);
