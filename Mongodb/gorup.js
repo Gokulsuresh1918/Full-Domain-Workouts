@@ -8,8 +8,6 @@ db.students.aggregate([
 ])
 
 
-
-
 db.students.aggregate([
     {
       $group: {

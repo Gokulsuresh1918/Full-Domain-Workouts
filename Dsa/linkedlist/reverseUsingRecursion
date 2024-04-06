@@ -1,0 +1,18 @@
+function reverseList(head) {
+    // Base case: if the list is empty or has only one node, return the head
+    if (!head || !head.next) {
+        return head;
+    }
+
+    // Recursively reverse the rest of the list
+    let newHead = reverseList(head.next);
+
+    // Change the next pointer of the next node to point to the current node
+    head.next.next = head;
+
+    // Change the next pointer of the current node to null
+    head.next = null;
+
+    // Return the new head of the reversed list
+    return newHead;
+}
