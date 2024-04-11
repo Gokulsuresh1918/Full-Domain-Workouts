@@ -25,18 +25,3 @@ db.collections_name.updataOne({field:value},{$set:{age:29}})
 //delete
 db.collections_name.deleteOne({field:value})
 
-//embeded document finding
-db.users.find({ 'addresses.street': '123 Main St' });
-
-//fing field starting with j
-db.collections_name.find({field:{$regex:'j.*'}})
-//using and operator
-db.collections_name.find({$and:[{field:value},{field:value}]})
-//or operator
-db.collections_name.find({$or:[{field:value},{field:value}]})
-//not operator
-db.collections_name.find({$not:{field:value}})
-//sorting
-db.collections_name.find().sort({age:1})
-//projection
-db.collections_name.find({field:value},{age:1})

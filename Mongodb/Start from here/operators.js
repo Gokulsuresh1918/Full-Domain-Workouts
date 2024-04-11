@@ -21,3 +21,8 @@ db.employees.find({ name: { $in: ["Alice", "Bob"] } })
 
 // Find all employees whose name is neither "Alice" nor "Bob".
 db.employees.find({ name: { $nin: ["Alice", "Bob"] } })
+// This query searches the collection for documents where the 'age' field is present,
+db.collection.find({ age: { $exists: true } });
+// This query searches the collection for documents where the 'age' field is specifically
+// of type 'number'.
+db.collection.find({ age: { $type: 'number' } });

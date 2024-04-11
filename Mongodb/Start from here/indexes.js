@@ -3,22 +3,24 @@
 db.collections_name.createIndex({field:1})
 
 // Create a compound index on multiple fields.
-// This example creates an index on 'fields' in ascending order and 'field' in descending order.
 db.collections_name.createIndex({fields:1},{field:-1})
 
-// Create a text index on the specified field.
 // Text indexes are used for full-text search.
 db.collections_name.createIndex({content:'text'})
 
-// Create a hashed index on the specified field.
 // Hashed indexes are used for equality comparisons.
 db.collections_name.createIndex({email:'hashed'})
 
-// Create a geospatial index on the specified field.
-// Geospatial indexes are used for queries that involve geographic data.
-// '2dsphere' is used for data stored as points on a sphere.
+// '2dsphere' is used for data stored as points on a spher  e.
 db.collections_name.createIndex({location:'2dsphere'})
+//ttl index
+db.collection.createIndex({ field: 1 }, { expireAfterSeconds: 3600 });
 
-// Retrieve all indexes on the collection.
 // This command returns an array of documents that describe the indexes on the collection.
 db.collections_name.getIndexes()
+
+db.COLLECTION_NAME.dropIndex(INDEX_NAME).
+//drop all
+db.COLLECTION_NAME.dropIndexes()
+//explain index
+db.users.find({ username: 'John' }).explain();
