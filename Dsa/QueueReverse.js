@@ -2,25 +2,20 @@ class Queue {
     constructor() {
        this.items = [];
     }
-   
     enqueue(element) {
        this.items.push(element);
     }
-   
     dequeue() {
        if (this.isEmpty())
          return "Underflow";
        return this.items.shift();
     }
-   
     peek() {
        return this.items[0];
     }
-   
     isEmpty() {
        return this.items.length == 0;
     }
-   
     // Function to reverse the queue
     reverse() {
        if (!this.isEmpty()) {
