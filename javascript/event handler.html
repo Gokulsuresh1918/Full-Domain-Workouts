@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Handler Example</title>
+</head>
+<body>
+
+<button id="myButton">Click me</button>
+
+<script>
+// Define the event handler function
+function handleClick(event) {
+    // Display a message when the button is clicked
+    alert("Button clicked!");
+}
+
+// Get a reference to the button element
+const button = document.getElementById("myButton");
+
+// Add an event listener to the button
+button.addEventListener("click", handleClick);
+</script>
+
+</body>
+</html>
